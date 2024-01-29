@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from "react-router-dom";
 import Logo from "../Assets/Logo.svg";
 import { BsCart2 } from "react-icons/bs";
 import { HiOutlineBars3 } from "react-icons/hi2";
@@ -43,18 +44,23 @@ const Navbar = () => {
   return (
     <nav>
       <div className="nav-logo-container">
+        <a href="/home">
         <img src={Logo} alt="logo" />
+        </a>
         <p> ...from phani</p>
       </div>
       <div className="navbar-links-container">
-        <a className="nav-button" href="">Home</a>
-        <a className="nav-button" href="">About</a>
-        <a className="nav-button" href="">Testimonials</a>
-        <a className="nav-button" href="">Contact</a>
-        <a href="">
+        <Link to="home" className="nav-button">Home</Link>
+        <Link to="about"className="nav-button">About</Link>
+        <Link to="RestaurantWebsite" className="nav-button">Ho-tels</Link>
+        <Link to="Testimonials" className="nav-button">Testimonials</Link>
+        <Link to="Contact" className="nav-button">Contact</Link>
+        <a href="#icon">
           <BsCart2 className="navbar-cart-icon" />
         </a>
-        <button className="primary-button">Bookings Now</button>
+        <a href="/RestaurantWebsite"> 
+          <button className="primary-button">Order Now</button>
+        </a>
       </div>
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
