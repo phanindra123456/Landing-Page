@@ -8,6 +8,9 @@ import Testimonial from "./Components/Testimonal";
 import Contact from "./Components/Contact";
 import RestaurantWebsite from "./Components/RestaurantWebsite";
 import FoodMenu from './Components/FoodMenu';
+import Modal from "./Components/Modal";
+import Success from "./Components/success";
+import Cancel from "./Components/Cancel";
 
 export default function Land() {
   return (
@@ -26,6 +29,9 @@ export default function Land() {
           <Route exact path="/Testimonials" element={<Testimonial />} />
           <Route exact path="/Contact" element={<Contact />} />
           <Route exact path="/FoodMenu" element={<FoodMenu/>} />
+          <Route exact path="/Modal" element={<Modal />} />
+          <Route exact path="/Success" element={<Success />} />
+          <Route exact path="/Cancel" element={<Cancel />}/>
         </Routes>
       </BrowserRouter>
     </div>

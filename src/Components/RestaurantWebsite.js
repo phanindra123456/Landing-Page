@@ -9,7 +9,7 @@ const HotelCard = ({ name, description, logo, rating }) => (
       <h3>{name}</h3>
       <p>{description}</p>
       <p>Rating: {rating}</p>
-      <Link to="/FoodMenu" className='menu-button'>Order Now</Link>
+      <Link to="/FoodMenu" className='button-78'>Order Now</Link>
     </div>
   </div>
 );
